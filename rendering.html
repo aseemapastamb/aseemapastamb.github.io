@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Aseem Apastamb</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1 id="title">Graphics Framework</h1>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#summary" id="summary-link"><span class="icon solid fa-envelope">Summary</span></a></li>
+								<li><a href="#screenshots" id="screenshots-link"><span class="icon solid fa-th">Screenshots</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://github.com/aseemapastamb" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/aseemapastamb/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href=mailto:"aseem.apastamb.05@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- About Me -->
+					<section id="summary" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2>Summary</h2>
+							</header>
+
+							<p>
+                                This is a graphics framework I created to experiment and add advanced rendering techniques like deferred shading, soft shadows, etc.
+							</p>
+
+							<p>
+                                It is developed in a C++ over the period of 4 months, from January to April 2023.
+							</p>
+
+						</div>
+					</section>
+
+				<!-- Screenshots -->
+					<section id="screenshots" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Screenshots</h2>
+							</header>
+
+							<div class="table">
+								<div class="row">
+									<div class="col-6 col-12-mobile"><a class="image fit"><img src="resources/rendering/deferred.png" alt="" /></a></div>
+									<div class="col-6 col-18-mobile">
+										This framework has deferred shading. This means that there are 2 rendering passes.
+										In the first pass, the geometrical information from the objects in the scene is collected.
+										This information is stored in a collection of textures called the G-Buffer, to be used in the second pass,
+										which involves the heavy lighting calculations.
+										This means that the complex lighting calculations are done only for the pixels that are visible from the eye position,
+										i.e., the front-most pixels.
+									</div>
+
+									<div class="col-6 col-18-mobile">
+										<p>Here is the G-Buffer for the scene.</p>
+										<p>The first texture is the position of objects.</p>
+										<p>The second texture is surface normals.</p>
+									</div>
+									<div class="col-3 col-6-mobile"><a class="image fit"><img src="resources/rendering/gbuffer1.png" alt="" /></a></div>
+									<div class="col-3 col-6-mobile"><a class="image fit"><img src="resources/rendering/gbuffer2.png" alt="" /></a></div>
+
+									<div class="col-6 col-18-mobile">
+										<p>The third texture is the diffuse colours of the materials.</p>
+										<p>The fourth texture is the specular colours of the materials.</p>
+									</div>
+									<div class="col-3 col-6-mobile"><a class="image fit"><img src="resources/rendering/gbuffer3.png" alt="" /></a></div>
+									<div class="col-3 col-6-mobile"><a class="image fit"><img src="resources/rendering/gbuffer4.png" alt="" /></a></div>
+
+									<div class="col-6 col-12-mobile"><a class="image fit"><img src="resources/rendering/locallights.png" alt="" /></a></div>
+									<div class="col-6 col-18-mobile">
+										The main advantage of deferred shading is that it enables us to have a large number of light sources.
+										Here are some blue local lights in the scene.
+									</div>
+
+									<div class="col-6 col-18-mobile">
+										We can see the lights more clearly if we turn on the range of influence of each light.
+									</div>
+									<div class="col-6 col-12-mobile"><a class="image fit"><img src="resources/rendering/locallights2.png" alt="" /></a></div>
+
+									<div class="col-6 col-12-mobile"><a class="image fit"><img src="resources/rendering/blurredshadow.png" alt="" /></a></div>
+									<div class="col-6 col-18-mobile">
+										I also added soft shadows using blurred shadow maps.
+										I used a method called Moment Shadow Maps to achieve this.
+										This was also an opportunity for me to learn and implement compute shaders, which I used to blur the shadow map.
+									</div>
+
+									<div class="col-6 col-18-mobile">
+										Here is an intermediate step while creating the blurred shadow map.
+										The process of blurring involves 2 passes - horizontal blur and vertical blur.
+										This is the output of the horizontal blur.
+									</div>
+									<div class="col-6 col-12-mobile"><a class="image fit"><img src="resources/rendering/horiblur.png" alt="" /></a></div>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
