@@ -27,7 +27,7 @@
 						<nav id="nav">
 							<ul>
 								<li><a href="#summary" id="summary-link"><span class="icon solid fa-envelope">Summary</span></a></li>
-								<li><a href="#screenshots" id="screenshots-link"><span class="icon solid fa-th">Screenshots</span></a></li>
+								<li><a href="#project" id="project-link"><span class="icon solid fa-th">Project</span></a></li>
 							</ul>
 						</nav>
 
@@ -50,7 +50,7 @@
 			<div id="main">
 
 				<!-- About Me -->
-					<section id="summary" class="one dark cover">
+					<section id="summary" class="two">
 						<div class="container">
 
 							<header>
@@ -58,22 +58,30 @@
 							</header>
 
 							<p>
-                                This is a graphics framework I created to experiment and add advanced rendering techniques like deferred shading, soft shadows, etc.
+								This is a graphics framework I created to experiment and add advanced rendering techniques like deferred shading, soft shadows, ambient occlusion, etc.
+								It was developed in C++ over the period of 4 months, from January to April 2023.
 							</p>
 
-							<p>
-                                It is developed in a C++ over the period of 4 months, from January to April 2023.
-							</p>
+							<h1>Contributions</h1>
+							<ul style="text-align:left">
+								<li>Created a performant renderer using deferred shading, allowing for a significant number of local light sources</li>
+								<li>Implemented Variance and Moments Algorithms for soft shadowing, improving visual depth and fidelity</li>
+								<li>
+									Combined physically-based shading and image-based lighting, including global tone mapping and colour space
+									conversion of values from HDR images, providing a more realistic appearance
+								</li>
+								<li>Further improved visual fidelity by including ambient occlusion, which adds contact shadows and darkened edges</li>
+							</ul>
 
 						</div>
 					</section>
 
-				<!-- Screenshots -->
-					<section id="screenshots" class="two">
+				<!-- Project -->
+					<section id="project" class="one dark">
 						<div class="container">
 
 							<header>
-								<h2>Screenshots</h2>
+								<h2>Project Snippets</h2>
 							</header>
 
 							<div class="table">
